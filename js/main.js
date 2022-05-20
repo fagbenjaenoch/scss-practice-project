@@ -13,3 +13,14 @@ navbarToggle.addEventListener("click", () => {
     }
 })
 
+const sr = ScrollReveal ({
+	origin: 'top',
+	distance: '80px',
+	duration: '2000',
+	reset: 'true'
+});
+
+sr.reveal('.section',{})
+sr.reveal('.bible_verse',{delay: 200})
+sr.reveal('.email-list-signup',{delay: 100})
+sr.reveal('input',{interval: 100})

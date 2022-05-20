@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A christian online community">
-    <meta name="keywords" content="StudyPlus + Christian Online Community">
-    <meta name="Author" content="Fagbenja Enoch">
-    <meta og:title="A Christian Online Community developed by Leading">
+    <meta name="keywords" content="StudyPlus+, Christian Online Community, Study the word of God Online">
+    <meta name="author" content="Fagbenja Enoch, Leading">
+    <meta property="og:title" content="StudyPlus Online Christian Community">
+    <meta property="og:description" content="A Christian Online Community developed by Leading">
+    <meta property="og:type" content="Website">
+    <!-- <meta property="og:image" content="A Christian Online Community developed by Leading"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>StudyPlus+</title>
+
+   <!-- local scroll reveal javascript file for testing purposes-->
+   <script src="js/scrollreveal.js"></script>
+    <!-- original scroll reveal file -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -34,9 +42,9 @@
     <!-- main-section -->
     <main>
         <div class="hero-img"></div>
-        <section>
+        <section class="section">
             <h1>Join Millions of <strong>Belivers</strong> as we Study the Word</h1>
-            <cite>
+            <cite class="bible_verse">
                 <blockquote>Sanctify them through thy truth, thy word is truth</blockquote>
                 John 17:17 (<abbr title="New King James Version">NKJV</abbr>)
             </cite>
@@ -46,9 +54,9 @@
     <footer>
         <div class="footer-container">
             
-             <form action="#" method="post">
-                 <h3>Join our mailing list to recieve daily E-mails and other useful contents to recharge your soul</h3>
-                <div class="email-list-signup flex-col">
+            <div class="email-list-signup flex-col">
+                <form action="#" method="post">
+                    <h3>Join our mailing list to recieve daily E-mails and other useful contents to recharge your soul</h3>
                     <label for="name">Your Fullname:
                         <input type="text" name="name" aria-required="true"> 
                     </label>
@@ -56,8 +64,8 @@
                         <input type="email" name="email" aria-required="true">
                     </label> 
                     <button id="submit-form">Submit</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
 
         <div class="copyright flex-col align-center">
@@ -71,7 +79,7 @@
             </div>
 
             <div class="flex-row">
-                <small> Made with 💛 by Leading &emsp; &copy; Copyright 2022</small>
+                <small> Made with 💛 by Leading  &copy; Copyright 2022</small>
             </div>
         </div>
     </footer>
