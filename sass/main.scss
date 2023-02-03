@@ -30,8 +30,6 @@ header{
     width: 100%;
     padding-inline: $gap * 4;
     backdrop-filter: blur(1em);
-    // margin: $gap * 2;
-    // border-radius: 15px;
     z-index: 1;
 
     .logo{
@@ -54,7 +52,7 @@ header{
 }
 
 
-.navbarToggle{
+.navbar-toggle{
     display: none;
     width: 1.5rem;
     aspect-ratio: 1;
@@ -71,41 +69,38 @@ header{
     cursor: pointer;
 }
 
-.navbarToggle:focus{
+.navbar-toggle:focus{
     outline: white solid 2px;
-    // outline-offset: 5px;
 }
 
 @media (max-width:700px) {
-    
     header{
         margin: 0;
         padding: 0;
+    }
 
-        .navbar{
-            position: fixed;
-            background: color(black);
-            inset: 0 0 0 30%;
-            min-height: 100vh;
-            z-index: 999;
-            // backdrop-filter: blur(1.5rem);
-            transform: translateX(100%);
-            @include transitionEase;
+    .navbar{
+        position: fixed;
+        background: color(black);
+        inset: 0 0 0 30%;
+        min-height: 100vh;
+        z-index: 999;
+        // backdrop-filter: blur(1.5rem);
+        transform: translateX(100%);
+        @include transitionEase;
 
-            ul{
-                margin-top: $gap*10;
-                text-align: center;
-                flex-direction: column;
-                // column-gap: ;
+        ul {
+            margin-top: $gap*10;
+            text-align: center;
+            flex-direction: column;
 
-                li{
-                    margin-top: $gap * 2;
-                    transform: translateY(-100vh);
-                    @include transitionEase;
+            li {
+                margin-top: $gap * 2;
+                transform: translateY(-100vh);
+                @include transitionEase;
 
-                    a{
-                        color: color(accent);
-                    }
+                a{
+                    color: color(accent);
                 }
             }
         }
@@ -122,59 +117,61 @@ header{
         //     }
         // }
 
-        .navbar[data-visible=true]{
-            transform: translateX(0%);
-            @include transitionEase;
+        // .navbar[data-visible=true]{
+        //     transform: translateX(0%);
+        //     @include transitionEase;
 
-            li{
-                transform: translateY(0);
+        //     li{
+        //         transform: translateY(0);
 
-                @for $i from 1 to 4 {
-                    li:nth-child(#{$i}){
-                        transition-delay: ($i * 0.1s) + 0.15s ;
-                    }
-                }
-            }
-        }
+        //         @for $i from 1 to 4 {
+        //             li:nth-child(#{$i}){
+        //                 transition-delay: ($i * 0.1s) + 0.15s ;
+        //             }
+        //         }
+        //     }
+        // }
 
-        .navbarToggle{
+        .navbar-toggle{
             display: block;
         }
 
-        .navbarToggle[aria-expanded="true"]{
+        .navbar-toggle[aria-expanded="true"]{
             background-image: url(../assets/icons/Cross.svg);
             background-color: color(accent);
         }
     }
 }
 
-main{
+main {
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
     display: grid;
     justify-items: start;
+}
 
-    section{
-        padding-block: 20vw;
-        width: 75%;
-        padding-inline: $gap * 5;
+.hero {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-        h1{
-            font-size: 3em;
-            margin-bottom: $gap * 3;
-    
-            strong{
-                color: color(primary);
-                border-bottom: 5px solid;
-                padding: 0 initial;
-            }
+    h1{
+        font-size: 3em;
+        margin-bottom: $gap * 3;
+
+        strong{
+            color: color(primary);
+            border-bottom: 5px solid;
+            padding: 0 initial;
         }
-    
-        blockquote{
-            margin-bottom: $gap;
-        }
+    }
+
+    blockquote{
+        margin-bottom: $gap;
     }
 }
 
@@ -191,17 +188,16 @@ footer{
         grid-template-columns: 1fr;
         place-items: center;
         padding: $gap * 3;
-        // padding: $gap;
         gap: $gap * 3;
 
-        form{
+        form {
             width: clamp(30rem,50vw,60vw);
             h3{
                 text-align: center;
                 margin: $gap 0;
             }
         }
-        .email-list-signup{
+        .email-list-signup {
             place-self: center;
 
             label{
